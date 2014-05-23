@@ -1,5 +1,5 @@
 {
-  "name": "debug.c",
+  "name": "debug",
   "version": "0.0.1",
   "repo": "clibs/debug",
   "description": "Debug logging for C",
