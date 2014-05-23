@@ -36,7 +36,7 @@ $(OBJS):
 	@echo $(OBJS)
 	$(CC) $(CFLAGS) -c -o $@ $(@:.o=.c)
 
-test: $(TESTS)
+test: $(OBJS) $(TESTS)
 
 $(TESTS):
 	 $(CC) $(OBJS) $(@) $(CFLAGS) -o $(@:.c=)
