@@ -7,14 +7,16 @@
 
 #include "debug.h"
 
-
 debug_init(active)
 debug_init(inactive)
 
+debug_t debug;
+debug_t debug2;
+
 int
 main (void) {
-  debug_t debug = debug_get(active);
-  debug_t debug2 = debug_get(inactive);
+  debug = debug_get(active);
+  debug2 = debug_get(inactive);
 
   debug("should see this");
   debug2("should not see this");
