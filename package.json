@@ -4,6 +4,7 @@
   "repo": "clibs/debug",
   "description": "Debug logging for C",
   "keywords": ["debug", "log"],
+  "src": ["debug.h", "debug.c"]
   "dependencies": { "jwerle/strsplit.h": "*" }
 }
 
