@@ -5,6 +5,9 @@
   "description": "Debug logging for C",
   "keywords": ["debug", "log"],
   "src": ["debug.h", "debug.c"],
-  "dependencies": { "jwerle/strsplit.h": "*" }
+  "dependencies": {
+    "jwerle/strsplit.h": "*",
+    "wildcardcmp": "*"
+  }
 }
 

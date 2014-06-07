@@ -27,8 +27,6 @@ ifeq ($(OS), Darwin)
 	LDFLAGS += -lc -Wl,-install_name,$(TARGET_DSO)
 endif
 
-export DEBUG=active,foo,bar
-
 all: $(OBJS)
 
 $(OBJS):
@@ -40,7 +38,7 @@ test: $(OBJS) $(TESTS)
 
 $(TESTS):
 	 $(CC) $(OBJS) $(@) $(CFLAGS) -o $(@:.c=)
-	 ./$(@:.c=)
+	 DEBUG=active,*bar ./$(@:.c=)
 	rm -f $(@:.c=)
 
 $(MAN_FILES): $(MAN_TPLS)
