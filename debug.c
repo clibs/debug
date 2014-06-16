@@ -17,7 +17,7 @@ debug_enabled (const char *name) {
   char **debugs = NULL;
   int i = 0;
   if (NULL == d) { return 0; }
-  debugs = calloc(1, sizeof(char));
+  debugs = (char **) calloc(1, sizeof(char));
   size = strsplit(d, debugs, ",");
   if (0 == size) { return free(debugs), 0; }
   for (i = 0; i < size; ++i) {
