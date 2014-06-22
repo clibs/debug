@@ -20,7 +20,7 @@ VERSION_MAJOR = 0
 VERSION_MINOR = 0
 VERSION_PATCH = 1
 
-CFLAGS += -std=c99 -Wall -O2 -fvisibility=hidden -fPIC -pedantic -Ideps
+CFLAGS += -D_GNU_SOURCE -std=c99 -Wall -O2 -fvisibility=hidden -fPIC -pedantic -Ideps
 LDFLAGS += -o $(TARGET_DSOLIB) -shared $(TARGET_DSO).$(VERSION_MAJOR)
 
 ifeq ($(OS), Darwin)
