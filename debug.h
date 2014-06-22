@@ -28,11 +28,11 @@ typedef void (* debug_t) (const char *, ...);
     char *buf = NULL;                                                         \
     va_list args;                                                             \
     va_start(args, fmt);                                                      \
-    int size = vasprintf(&buf, fmt, args);                                    \
-    printf(#name " - %s\n", buf);                                             \
+    if (-1 != vasprintf(&buf, fmt, args)) {                                   \
+      printf(#name " - %s\n", buf);                                           \
+    }                                                                         \
     va_end(args);                                                             \
     free(buf);                                                                \
-    (size, 0);                                                                \
   }                                                                           \
 
 /**
